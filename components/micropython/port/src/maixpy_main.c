@@ -310,7 +310,7 @@ void load_config_from_spiffs(config_data_t* config)
 			config->freq_pll1 = config->freq_pll1<FREQ_PLL1_MIN ? FREQ_PLL1_MIN : config->freq_pll1;
 			if(config->kpu_div==0)
 				config->kpu_div = 1;
-			if(config->gc_heap_size == 0)
+			if (1) // config->gc_heap_size == 0)
 			{
 				config->gc_heap_size = CONFIG_MAIXPY_GC_HEAP_SIZE;
 			}
